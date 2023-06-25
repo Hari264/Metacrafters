@@ -1,0 +1,36 @@
+
+const  Nfts  = []
+
+function mintNFT (name,age,country,eyecolor,billing) {
+    let Nft = {
+        "Name" : name,
+        "Age" : age,
+        "Country" : country,
+        "Eye_Color" : eyecolor,
+        "Billing" : billing
+    }
+    Nfts.push(Nft);
+}
+
+function listNFTs () {
+for(let i = 0;i<Nfts.length;i++){
+    console.log("\nId:\t"+ (i+1));
+    console.log("Name:\t"+Nfts[i].Name);
+    console.log("Age:\t"+Nfts[i].Age);
+    console.log("Country:\t"+Nfts[i].Country);
+    console.log("Eye Color:\t"+Nfts[i].Eye_Color);
+    console.log("Billing:\t"+Nfts[i].Billing);
+
+}
+}
+
+function getTotalSupply() {
+console.log("\n\nTotal no of NFTs = "+Nfts.length);
+}
+
+mintNFT("Hari",19,"India","Black","Gold_Chain");
+mintNFT("Debu",20,"USA","Black","Diamond");
+mintNFT("Harsha",22,"Germany","Blue","Silver_Chain");
+listNFTs();
+getTotalSupply();
+
